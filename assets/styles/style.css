@@ -982,9 +982,6 @@ body {
   .burger {
     display: flex;
   }
-  .text-gps {
-    padding-left: 33px;
-  }
   .top-bar {
     gap: 102px;
   }
