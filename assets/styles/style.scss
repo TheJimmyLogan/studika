@@ -837,7 +837,7 @@ body{
 
     @media screen and (max-width: 900px) {
 
-        .subnav{
+          .subnav{
             display: none;
             visibility: hidden;
             max-width: 820px;
@@ -872,14 +872,6 @@ body{
           .subcontent-section{
             max-width: 790px;
           }
-
-          .sub-info-block{
-            img{
-                max-width: 790px;
-            }
-          }
-      
-    
     }
 
 

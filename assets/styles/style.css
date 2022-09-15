@@ -958,9 +958,6 @@ body {
   .subcontent-section {
     max-width: 790px;
   }
-  .sub-info-block img {
-    max-width: 790px;
-  }
 }
 @media screen and (max-width: 420px) {
   .location {
