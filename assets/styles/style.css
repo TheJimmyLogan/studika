@@ -962,7 +962,7 @@ body {
     width: 100%;
   }
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 680px) {
   .location {
     max-width: 420;
   }
