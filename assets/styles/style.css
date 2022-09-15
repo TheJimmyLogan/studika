@@ -958,6 +958,9 @@ body {
   .subcontent-section {
     max-width: 790px;
   }
+  .main-chart img {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 420px) {
   .location {
