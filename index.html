@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="assets/script/script.js" defer></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+
+        <section class="top-bar">
+
+            <div class="burger">
+                <img src="../Project 2/assets/images/burger-menu.svg alt=">
+            </div>
+
+            <section class="text-gps">
+                <img src="./assets/images/logo.svg" alt="">
+                <div class="location">
+                    <button class="location-btn" id="locationOpenBtn">
+                        <img src="./assets/images/gps.svg" alt="">
+                        <span class="selected-location">Любой регион</span>
+                    </button>
+                    <div class="location-search">
+                        <div class="search-input">
+                            <input id="locationSearchInput" placeholder="Регион, город, населенный пункт" type="text">
+                        </div>
+                        <div class="chosen-location">
+
+                        </div>
+                        <section class="location-list">
+
+                        </section>
+
+                        <button id="saveLocationsBtn" class="save-location-btn">Сохранить</button>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="inp-loop">
+                <img class="loop-icon" src="./assets/images/loop.svg" alt="">
+                <input id="mainSearchInput" placeholder="Учебное заведение, специальность или профессия" type="text">
+
+                <div class="definite-content">
+                    <section class="internal-list">
+                    </section>
+                </div>
+            </section>
+
+            <div class="account-like-container">
+                <div class="like">
+                    <img src="./assets/images/heart.svg" alt="">
+                    <span>1</span>
+                </div>
+
+                <div class="account">
+                    <h1>Екатерина</h1>
+                    <img src="./assets/images/foto.svg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <div class="back-content">
+            <img src="../Project 2/assets/images/back.svg alt=" alt="">
+            Назад
+        </div>
+
+
+        <div class="nav-container">
+            <button id='navScrollLeftBtn' class="nav-arrow-btn left hide"></button>
+
+            <section class="nav">
+                <button class="nav-btn active">Вузы</button>
+                <button class="nav-btn">Колледжи</button>
+                <button class="nav-btn">Техникумы</button>
+                <button class="nav-btn">Училища</button>
+                <button class="nav-btn">Специальности</button>
+                <button class="nav-btn">Профессии</button>
+                <button class="nav-btn">Отзывы</button>
+                <button class="nav-btn">Учебным заведениям</button>
+                <button class="nav-btn">Тест на профориентацию</button>
+            </section>
+            <button id='navScrollRightBtn' class="nav-arrow-btn hide"></button>
+
+        </div>
+
+
+    </div>
+    <div class="content">
+        <section class="bread-crumb">
+            <ul>
+                <li>Москва</li>
+                <li><img src="./assets/images/arrow-right.svg" alt=""></li>
+                <li>Высшее образование</li>
+                <li><img src="./assets/images/arrow-right.svg" alt=""></li>
+                <li>Вузы</li>
+                <li><img src="./assets/images/arrow-right.svg" alt=""></li>
+                <li>МГТУ им. Н.Э. Баумана</li>
+            </ul>
+        </section>
+
+        <div class="mski">
+            <img class="mski-logo" src="./assets/images/logo.png" alt="">
+            <button class="primary-btn">оставить отзыв</button>
+            <button class="secondary-btn">проверить шансы поступить</button>
+        </div>
+
+        <div class="body-box">
+            <div class="name-likes-container">
+                <h1>
+                    Московский государственный технический
+                    университет имени Н.Э. Бáумана
+                </h1>
+                <section class="box-heart">
+                    <button class="image-btn">
+                        <img src="./assets/images/heart.svg" width="15px" alt="">
+                        <h2>В Избранное</h2>
+                    </button>
+
+                    <button class="image-btn noborder-btn">
+                        <img src="./assets/images/bell.svg" alt="">
+                    </button>
+
+                    <button class="image-btn noborder-btn">
+                        <img src="./assets/images/download.svg" alt="">
+                    </button>
+
+
+                </section>
+            </div>
+
+            <div class="reviews">
+                <ul>
+                    <li>
+                        <img src="./assets/images/star.svg" alt="">
+                        <span class="score"> 2.4</span>
+                        <span class="review-count">(75 отзывов)</span>
+                    </li>
+                    <li><img src="./assets/images/marker.svg" width="8px" alt=""></li>
+                    <li>Москва, ул. Новочеремушкинская, д. 69</li>
+                    <li><img src="./assets/images/marker.svg" width="8px" alt=""></li>
+                    <li>Приемная комиссия: 7 (499) 181 21 33</li>
+                </ul>
+            </div>
+
+            <div class="update">
+                <h1>Обновлено 11.11.2011</h1>
+                <button class="link-btn">Сообщить об ошибке</button>
+            </div>
+        </div>
+
+        <div class="subnav-subcontent-box">
+            <section class="subnav">
+                <div class="subnav-category">
+                    <button class="link-grey-btn">Основная информация</button>
+                    <span class="count">100</span>
+                </div>
+
+                <div class="subnav-category">
+                    <button class="link-grey-btn">Специальности</button>
+                    <span class="count">100</span>
+                </div>
+
+                <div class="subnav-category">
+                    <button class="link-grey-btn">Об университете</button>
+                    <span class="count">100</span>
+                </div>
+
+                <div class="subnav-category">
+                    <button class="link-grey-btn">Контакты</button>
+                    <span class="count">100</span>
+                </div>
+
+                <div class="subnav-category">
+                    <button class="link-grey-btn">Отзывы</button>
+                    <span class="count">100</span>
+                </div>
+
+                <div class="subnav-category">
+                    <button class="link-grey-btn">Преподаватели</button>
+                    <span class="count">100</span>
+                </div>
+
+                <div class="subnav-category">
+                    <button class="link-grey-btn">Новости</button>
+                    <span class="count">100</span>
+                </div>
+
+                <div class="subnav-category">
+                    <button class="link-grey-btn">Задать вопрос</button>
+                    <span class="count">100</span>
+                </div>
+
+                <div class="subnav-category">
+                    <button class="link-grey-btn">Часто задаваемые вопросы</button>
+                    <span class="count">100</span>
+                </div>
+
+            </section>
+
+
+            <section class="subcontent">
+                <section class="subcontent-section">
+                    <h1 class="main-title">Основная информация</h1>
+                    <section class="left-right-sub">
+                        <div class="sub-info-box">
+                            <section class="sub-infonum">
+
+                                <div>
+                                    <span>4 532</span>
+                                    <p>платных мест</p>
+                                </div>
+
+                                <div>
+                                    <span>1 702</span>
+                                    <p>бюджетных мест</p>
+                                </div>
+
+                            </section>
+                        </div>
+
+                        <div class="sub-info-box">
+                            <section class="sub-infonum">
+
+                                <div>
+                                    <span class="sub-black">1 место</span>
+                                    <p>в Санкт-Петербурге</p>
+                                </div>
+
+                                <div>
+                                    <span class="sub-black">12 место</span>
+                                    <p>в РФ</p>
+                                </div>
+
+                            </section>
+                        </div>
+                    </section>
+
+                    <div class="sub-info-block-left-right">
+                        <div class="sub-info-block">
+                            <section>
+                                <p>Государственный</p>
+                                <img src="./assets/images/check-mark.svg" alt="">
+                            </section>
+                            <section>
+                                <p>Общежитие</p>
+                                <img src="./assets/images/cross-mark.svg" alt="">
+                            </section>
+                            <section>
+                                <p>Военная кафедра</p>
+                                <img src="./assets/images/check-mark.svg" alt="">
+                            </section>
+                        </div>
+
+                        <div class="sub-info-block no-flex-1">
+                            <section class="sub-iside">
+                                <h1>Вы представитель УЗ?</h1>
+                                <button class="white-btn">получить доступ</button>
+                            </section>
+
+                        </div>
+                    </div>
+                    <h1>Проходной балл</h1>
+                    <div class="main-chart">
+                        <section class="sub-info-block">
+                            <img src="./assets/images/tabl.svg" alt="">
+                        </section>
+                    </div>
+                </section>
+
+                <section class="subcontent-section">
+                    <div class="specialties">
+                        <section class="specialties-left">
+                            <h1 class="main-title">Специальности</h1>
+                            <p>432 специальности</p>
+                        </section>
+
+                        <section class="specialties-right">
+                            Специальности МГТУ им. Н. Э. Баумана
+                        </section>
+                    </div>
+
+                    <div class="filter">
+                        <span>Сортировать:</span>
+                        <button class="filter-btn active">по оплате в год</button>
+                        <button class="filter-btn ">по отзывам</button>
+                        <button class="filter-btn ">по проходному баллу</button>
+                        <button class="filter-btn ">по количнству бюджетных мест</button>
+                    </div>
+
+                    <div class="university-list">
+                        <div class="university">
+                            <div class="img"></div>
+                            <div class="main-info">
+                                <p class="program">бакалавриат · 01.03.00 </p>
+                                <h1>Прикладная математика и информатика</h1>
+                                <div class="type">
+                                    <button class="image-btn">Очно</button>
+                                    <button class="image-btn">Заочно</button>
+                                    <button class="image-btn">Очно-заочно</button>
+                                    <button class="image-btn">Дистанционно</button>
+                                </div>
+                                <p class="descr">
+                                    Программное обеспечение вычислительных систем · Математическое и программное
+                                    обеспечение защиты информации · Экономика · Организация педагогическо...
+                                </p>
+                                <button class="link-dark-grey-btn">Все 43 профиля</button>
+
+                            </div>
+                            <div class="side-info">
+                                <div class="row">
+                                    <img src="./assets/images/universities/icons/zzz.svg" alt="">
+                                    <img src="./assets/images/universities/icons/bank.svg" alt="">
+                                    <img src="./assets/images/universities/icons/flag-right.svg" alt="">
+                                </div>
+                                <div class="row">
+                                    <span class="title">Бюджетных мест</span>
+                                    <span class="number">260</span>
+                                </div>
+                                <div class="row">
+                                    <span class="title">Проходной балл</span>
+                                    <span class="number">от 152</span>
+                                </div>
+                                <div class="row">
+                                    <span class="title">Оплата в год</span>
+                                    <span class="number">от 90 000 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="university">
+                            <div class="img"></div>
+                            <div class="main-info">
+                                <p class="program">бакалавриат · 01.03.00 </p>
+                                <h1>Прикладная математика и информатика</h1>
+                                <div class="type">
+                                    <button class="image-btn">Очно</button>
+                                    <button class="image-btn">Заочно</button>
+                                    <button class="image-btn">Очно-заочно</button>
+                                    <button class="image-btn">Дистанционно</button>
+                                </div>
+                                <p class="descr">
+                                    Программное обеспечение вычислительных систем · Математическое и программное
+                                    обеспечение защиты информации · Экономика · Организация педагогическо...
+                                </p>
+                                <button class="link-dark-grey-btn">Все 43 профиля</button>
+
+                            </div>
+                            <div class="side-info">
+                                <div class="row">
+                                    <img src="./assets/images/universities/icons/zzz.svg" alt="">
+                                    <img src="./assets/images/universities/icons/bank.svg" alt="">
+                                    <img src="./assets/images/universities/icons/flag-right.svg" alt="">
+                                </div>
+                                <div class="row">
+                                    <span class="title">Бюджетных мест</span>
+                                    <span class="number">260</span>
+                                </div>
+                                <div class="row">
+                                    <span class="title">Проходной балл</span>
+                                    <span class="number">от 152</span>
+                                </div>
+                                <div class="row">
+                                    <span class="title">Оплата в год</span>
+                                    <span class="number">от 90 000 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="university">
+                            <div class="img"></div>
+                            <div class="main-info">
+                                <p class="program">бакалавриат · 01.03.00 </p>
+                                <h1>Прикладная математика и информатика</h1>
+                                <div class="type">
+                                    <button class="image-btn">Очно</button>
+                                    <button class="image-btn">Заочно</button>
+                                    <button class="image-btn">Очно-заочно</button>
+                                    <button class="image-btn">Дистанционно</button>
+                                </div>
+                                <p class="descr">
+                                    Программное обеспечение вычислительных систем · Математическое и программное
+                                    обеспечение защиты информации · Экономика · Организация педагогическо...
+                                </p>
+                                <button class="link-dark-grey-btn">Все 43 профиля</button>
+
+                            </div>
+                            <div class="side-info">
+                                <div class="row">
+                                    <img src="./assets/images/universities/icons/zzz.svg" alt="">
+                                    <img src="./assets/images/universities/icons/bank.svg" alt="">
+                                    <img src="./assets/images/universities/icons/flag-right.svg" alt="">
+                                </div>
+                                <div class="row">
+                                    <span class="title">Бюджетных мест</span>
+                                    <span class="number">260</span>
+                                </div>
+                                <div class="row">
+                                    <span class="title">Проходной балл</span>
+                                    <span class="number">от 152</span>
+                                </div>
+                                <div class="row">
+                                    <span class="title">Оплата в год</span>
+                                    <span class="number">от 90 000 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="university">
+                            <div class="img"></div>
+                            <div class="main-info">
+                                <p class="program">бакалавриат · 01.03.00 </p>
+                                <h1>Прикладная математика и информатика</h1>
+                                <div class="type">
+                                    <button class="image-btn">Очно</button>
+                                    <button class="image-btn">Заочно</button>
+                                    <button class="image-btn">Очно-заочно</button>
+                                    <button class="image-btn">Дистанционно</button>
+                                </div>
+                                <p class="descr">
+                                    Программное обеспечение вычислительных систем · Математическое и программное
+                                    обеспечение защиты информации · Экономика · Организация педагогическо...
+                                </p>
+                                <button class="link-dark-grey-btn">Все 43 профиля</button>
+
+                            </div>
+                            <div class="side-info">
+                                <div class="row">
+                                    <img src="./assets/images/universities/icons/zzz.svg" alt="">
+                                    <img src="./assets/images/universities/icons/bank.svg" alt="">
+                                    <img src="./assets/images/universities/icons/flag-right.svg" alt="">
+                                </div>
+                                <div class="row">
+                                    <span class="title">Бюджетных мест</span>
+                                    <span class="number">260</span>
+                                </div>
+                                <div class="row">
+                                    <span class="title">Проходной балл</span>
+                                    <span class="number">от 152</span>
+                                </div>
+                                <div class="row">
+                                    <span class="title">Оплата в год</span>
+                                    <span class="number">от 90 000 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="university">
+                            <div class="img"></div>
+                            <div class="main-info">
+                                <p class="program">бакалавриат · 01.03.00 </p>
+                                <h1>Прикладная математика и информатика</h1>
+                                <div class="type">
+                                    <button class="image-btn">Очно</button>
+                                    <button class="image-btn">Заочно</button>
+                                    <button class="image-btn">Очно-заочно</button>
+                                    <button class="image-btn">Дистанционно</button>
+                                </div>
+                                <p class="descr">
+                                    Программное обеспечение вычислительных систем · Математическое и программное
+                                    обеспечение защиты информации · Экономика · Организация педагогическо...
+                                </p>
+                                <button class="link-dark-grey-btn">Все 43 профиля</button>
+
+                            </div>
+                            <div class="side-info">
+                                <div class="row">
+                                    <img src="./assets/images/universities/icons/zzz.svg" alt="">
+                                    <img src="./assets/images/universities/icons/bank.svg" alt="">
+                                    <img src="./assets/images/universities/icons/flag-right.svg" alt="">
+                                </div>
+                                <div class="row">
+                                    <span class="title">Бюджетных мест</span>
+                                    <span class="number">260</span>
+                                </div>
+                                <div class="row">
+                                    <span class="title">Проходной балл</span>
+                                    <span class="number">от 152</span>
+                                </div>
+                                <div class="row">
+                                    <span class="title">Оплата в год</span>
+                                    <span class="number">от 90 000 ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="secondary-btn">
+                            Показать все специальности
+                        </button>
+                    </div>
+
+                </section>
+
+
+
+                <div class="subcontent-section">
+                    <h1 class="main-title">Об университете</h1>
+                    <div class="about">
+                        <div class="collage-img">
+                            <div class="img1"> </div>
+                            <div class="img2"> </div>
+                            <div class="img3"> </div>
+                            <div class="img4"> </div>
+                            <div class="img5"> </div>
+                        </div>
+
+                        <section class="discr-university">
+                            <p>Московский университет ― это один из самых старейших университетов России, был основан в
+                                1755
+                                году. Университет известен во мире и занимает лидирующие места в рейтингах вузов самых
+                                различных
+                                направлений.
+
+                                В 2008 году он получил награду «Европейское качество» «за стремление достичь высокого
+                                качества
+                                образовательных услуг в соответствии с международными стандартами». МГТУ им. Н. Э.
+                                Баумана в
+                                течение более чем 14 лет является головным вузом Ассоциации технических университетов, в
+                                состав
+                                которой входят более 130 российских университетов.</p>
+
+                            <button class="link-blue-grey-btn">
+                                Развернуть
+                            </button>
+
+                        </section>
+                    </div>
+                </div>
+
+                <div class="subcontent-section">
+                    <h1 class="main-title">Контакты</h1>
+                    <section class="contacts-box">
+                        <div class="main">
+                            <section class="left">
+                                <span>Адрес:</span>
+                                <span>Официальный сайт:</span>
+                                <span>Приемная комиссия:</span>
+                                <span>Лицензия:</span>
+                                <span>Аккредитация:</span>
+                            </section>
+                            <section class="right">
+                                <span class="text">Москва, ул. Новочеремушкинская, д. 69</span>
+                                <span><button class="link-btn-large">www.siteofunivercity.com</button></span>
+                                <span class="text">+ 7 965 985 69 85</span>
+                                <span><button class="link-btn-large">90Л01 0008333 рег. №1355, от
+                                        01.04.2015</button></span>
+                                <span><button class="link-btn-large">90А01 0001389 рег. №1308, действует до
+                                        03.07.2026</button></span>
+                            </section>
+
+                        </div>
+
+                        <div class="social">
+                            <img src="./assets/images/facebook.svg" alt="">
+                            <img src="./assets/images/vk.svg" alt="">
+                            <img src="./assets/images/telegram.svg" alt="">
+                            <img src="./assets/images/instagram.svg" alt="">
+                        </div>
+
+                    </section>
+                </div>
+
+            </section>
+
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>
