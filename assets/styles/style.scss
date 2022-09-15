@@ -486,6 +486,8 @@ body{
         display: flex;
         flex-direction: column;
         gap: $size-16px;
+        margin-left: auto;
+        margin-right: auto;
 
         .main-title{
             font-size: $size-31px;
@@ -1001,8 +1003,6 @@ h1{
     display: flex;
     flex-direction: column;
     max-width: 370px;
-    margin-left: auto;
-    margin-right: auto;
 
     .filter{
         display: none;
