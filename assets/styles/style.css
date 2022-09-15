@@ -1057,6 +1057,8 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .subcontent .subcontent-section .filter {
     display: none;
