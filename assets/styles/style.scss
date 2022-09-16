@@ -34,6 +34,9 @@ body{
     max-width: 1216px;
     padding: 16px;
 
+    .burger{
+        display: none;
+    }
 
     .location{
         display: flex;
@@ -906,12 +909,12 @@ body{
     max-width: 370px;
 }
 
-.burger{
-    display: flex;
-}
-
 .top-bar{
     gap: 102px;
+
+    .burger{
+        display: flex;
+    }
 }
 
 .account{

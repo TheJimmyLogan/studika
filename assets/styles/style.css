@@ -260,6 +260,9 @@ body {
   max-width: 1216px;
   padding: 16px;
 }
+.top-bar .burger {
+  display: none;
+}
 .top-bar .location {
   display: flex;
   align-items: center;
@@ -984,11 +987,11 @@ body {
   .body-box {
     max-width: 370px;
   }
-  .burger {
-    display: flex;
-  }
   .top-bar {
     gap: 102px;
+  }
+  .top-bar .burger {
+    display: flex;
   }
   .account {
     display: none;
