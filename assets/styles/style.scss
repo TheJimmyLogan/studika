@@ -948,8 +948,9 @@ body{
 
     .back-content{
         display: flex;
-        padding: 15px 45px;
+        padding: $size-16px $size-32px;
         background: #F1F1F1;
+        align-items: center;
     }
 
     .mski{
@@ -1120,10 +1121,12 @@ body{
         }
     }
 
-    .subcontent .subcontent-section .left-right-sub .sub-info-box .sub-infonum{
-        flex-wrap: wrap;
-    }
+}
 
+@media screen and (max-width: 380px) {
+.subcontent .subcontent-section .left-right-sub .sub-info-box .sub-infonum{
+    flex-wrap: wrap;
+}
 }
 
 
