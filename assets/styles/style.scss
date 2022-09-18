@@ -373,6 +373,10 @@ body{
     border-radius: 0px 0px 10px 10px;
     background: $white-color;
 
+    .secondary-btn{
+        display: none;
+    }
+
     .name-likes-container{
         display: flex;
 
@@ -662,6 +666,7 @@ body{
                     min-height: 216px;
                     border-radius: 6px;
                     background-size: cover;
+                    background-position: center;
                 }
                 .main-info{
                     padding: $size-8px;
@@ -785,6 +790,7 @@ body{
             box-shadow: 0px 7px 13px rgba(49, 71, 129, 0.07);
             border-radius: 10px;
             padding: $size-16px;
+
                 p{
                     color: $light-gray-color;
                 }
@@ -801,6 +807,10 @@ body{
             border-radius: 10px;
             padding: $size-16px;
 
+            .main.mobile{
+                display: none;
+            }
+
             .main{
                 display: flex;
                 width: 100%;
@@ -814,6 +824,12 @@ body{
                     span{
                         font-size: $size-16px;
                         color: $light-gray-color;
+                    }
+
+                    .text{
+                        color: $dark-gray-color;
+                        font-weight: bold;
+                        
                     }
 
                 }
@@ -859,7 +875,7 @@ body{
           }
 
           .reviews{
-            white-space: pre;
+            padding: 24px 0;
 
             ul{
                 flex-wrap: wrap;
@@ -887,151 +903,226 @@ body{
 
 
 @media screen and (max-width: 680px) {
-  .location{
-    max-width: 420;
-
-    img{
+    .box-heart{
         display: none;
+    }
+
+    .location{
         max-width: 420;
-    }
 
-    .selected-location{
-        display: none;
-    }
+        img{
+            display: none;
+            max-width: 420;
+        }
 
-  }
+        .selected-location{
+            display: none;
+        }
+
+    }
 
   .inp-loop{
     display: none;
-}
-
-.body-box{
-    max-width: 370px;
-}
-
-.top-bar{
-    gap: 102px;
-
-    .burger{
-        display: flex;
     }
-}
 
-.account{
-    display: none;
-}
+    .top-bar{
 
-.nav-container{
-    display: none;
-}
+        .burger{
+            display: flex;
+        }
+    }
 
-.bread-crumb{
-    display: none;
-}
-
-.secondary-btn{
-    display: none;
-}
-
-.back-content{
-    display: flex;
-    padding: 15px 45px;
-    background: #F1F1F1;
-}
-
-.mski{
-    height: 368px;
-}
-
-.primary-btn{
-    display: none;
-}
-
-.image-btn{
-    display: none;
-}
-
-.name-likes-container h1{
-    font-size: 18px;
-}
-
-.reviews ul{
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 5px;
-    align-items: baseline;
-}
-
-.reviews img{
-    display: none;
-}
-
-.left-right-sub{
-    display: flex;
-    flex-direction: column;
-    max-width: 370px;
-}
-
-.sub-info-block-left-right{
-    display: flex;
-    flex-direction: column;
-}
-
-.sub-info-block img{
-    max-width: 370px;
-}
-
-.main-title h1{
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    white-space: pre;
-}
-.sub-iside{
-    align-items: center;
-}
-
-h1{
-    display: flex;
-    justify-content: center;
-}
-
-.university{
-    display: flex;
-    flex-direction: column;
-    max-width: 370px;
-}
-
-.subcontent .subcontent-section{
-    display: flex;
-    flex-direction: column;
-    max-width: 370px;
-
-    .filter{
+    .account{
         display: none;
     }
-}
 
-.update{
-    justify-content: center;
-}
+    .nav-container{
+        display: none;
+    }
 
-.descr{
-    display: none;
-}
+    .bread-crumb{
+        display: none;
+    }
 
-.link-dark-grey-btn{
-    display: none;
-}
 
-.main{
-    display: flex;
-    flex-direction: column;
-}
 
-.white-btn{
-    width: 100%;
-}
+    .back-content{
+        display: flex;
+        padding: 15px 45px;
+        background: #F1F1F1;
+    }
+
+    .mski{
+        min-height: 200px;
+
+        .secondary-btn{
+            display: none;
+        }
+    }
+
+    .primary-btn{
+        display: none;
+    }
+
+
+
+    .name-likes-container h1{
+        font-size: 18px;
+    }
+
+    .reviews ul{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 5px;
+        align-items: baseline;
+
+        li:nth-child(even){
+            display: none;
+        }
+    }
+
+
+
+    .left-right-sub{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sub-info-block-left-right{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .main-title h1{
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        white-space: pre;
+    }
+
+    .specialties{
+
+        .specialties-left{
+            width: 100%;
+            text-align: center;
+        }
+
+        .specialties-right{
+            display: none;
+        }
+    }
+
+    .sub-iside{
+        align-items: center;
+        
+    }
+
+    h1{
+        display: flex;
+        justify-content: center;
+    }
+
+    .subcontent .subcontent-section .university-list{
+        flex-direction: row;
+        max-width: calc(100vw - 32px);
+        overflow: auto;
+
+        .university{
+            min-width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+        }
+    }
+
+
+
+    .subcontent .subcontent-section{
+        display: flex;
+        flex-direction: column;
+
+        .filter{
+            display: none;
+        }
+    }
+
+    .update{
+        justify-content: center;
+    }
+
+    .descr{
+        display: none;
+    }
+
+    .link-dark-grey-btn{
+        display: none;
+    }
+
+    .subcontent .subcontent-section .contacts-box .main{
+        display: none;
+    }
+
+    .subcontent .subcontent-section .contacts-box .main.mobile{
+        display: flex;
+    }
+
+    .white-btn{
+        width: 100%;
+    }
+
+
+    .subcontent {
+        .subcontent-section {
+            .university-list {
+                .university {
+                    .side-info {
+                        width: auto;
+                        .row:first-child{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .discr-university{
+           
+        p{
+           max-height: 150px;
+           overflow: hidden;
+
+        }
+    }
+
+    
+    .subcontent .subcontent-section .about .collage-img {
+        grid-template-columns: repeat(2, 1fr) repeat(2, 106px);
+        grid-template-rows: repeat(2, 106px) repeat(2, 0);
+    }
+
+    .body-box{
+    
+        .secondary-btn{
+            display: flex;
+            margin: auto;
+            white-space: normal;
+        }
+
+    }
+
+    .show-all-section{
+        text-align: center;
+
+        .secondary-btn{
+            white-space: normal;
+        }
+    }
+
+    .subcontent .subcontent-section .left-right-sub .sub-info-box .sub-infonum{
+        flex-wrap: wrap;
+    }
 
 }
 

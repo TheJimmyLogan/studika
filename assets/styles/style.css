@@ -558,6 +558,9 @@ body {
   border-radius: 0px 0px 10px 10px;
   background: #fff;
 }
+.body-box .secondary-btn {
+  display: none;
+}
 .body-box .name-likes-container {
   display: flex;
 }
@@ -794,6 +797,7 @@ body {
   min-height: 216px;
   border-radius: 6px;
   background-size: cover;
+  background-position: center;
 }
 .subcontent .subcontent-section .university-list .university .main-info {
   padding: 8px;
@@ -910,6 +914,9 @@ body {
   border-radius: 10px;
   padding: 16px;
 }
+.subcontent .subcontent-section .contacts-box .main.mobile {
+  display: none;
+}
 .subcontent .subcontent-section .contacts-box .main {
   display: flex;
   width: 100%;
@@ -923,6 +930,10 @@ body {
 .subcontent .subcontent-section .contacts-box .main .left span {
   font-size: 16px;
   color: #767676;
+}
+.subcontent .subcontent-section .contacts-box .main .left .text {
+  color: #222222;
+  font-weight: bold;
 }
 .subcontent .subcontent-section .contacts-box .main .right {
   display: flex;
@@ -949,7 +960,7 @@ body {
     font-size: 25px;
   }
   .reviews {
-    white-space: pre;
+    padding: 24px 0;
   }
   .reviews ul {
     flex-wrap: wrap;
@@ -971,6 +982,9 @@ body {
   }
 }
 @media screen and (max-width: 680px) {
+  .box-heart {
+    display: none;
+  }
   .location {
     max-width: 420;
   }
@@ -984,12 +998,6 @@ body {
   .inp-loop {
     display: none;
   }
-  .body-box {
-    max-width: 370px;
-  }
-  .top-bar {
-    gap: 102px;
-  }
   .top-bar .burger {
     display: flex;
   }
@@ -1002,21 +1010,18 @@ body {
   .bread-crumb {
     display: none;
   }
-  .secondary-btn {
-    display: none;
-  }
   .back-content {
     display: flex;
     padding: 15px 45px;
     background: #F1F1F1;
   }
   .mski {
-    height: 368px;
+    min-height: 200px;
   }
-  .primary-btn {
+  .mski .secondary-btn {
     display: none;
   }
-  .image-btn {
+  .primary-btn {
     display: none;
   }
   .name-likes-container h1 {
@@ -1028,26 +1033,29 @@ body {
     gap: 5px;
     align-items: baseline;
   }
-  .reviews img {
+  .reviews ul li:nth-child(even) {
     display: none;
   }
   .left-right-sub {
     display: flex;
     flex-direction: column;
-    max-width: 370px;
   }
   .sub-info-block-left-right {
     display: flex;
     flex-direction: column;
-  }
-  .sub-info-block img {
-    max-width: 370px;
   }
   .main-title h1 {
     display: flex;
     justify-content: center;
     text-align: left;
     white-space: pre;
+  }
+  .specialties .specialties-left {
+    width: 100%;
+    text-align: center;
+  }
+  .specialties .specialties-right {
+    display: none;
   }
   .sub-iside {
     align-items: center;
@@ -1056,15 +1064,19 @@ body {
     display: flex;
     justify-content: center;
   }
-  .university {
+  .subcontent .subcontent-section .university-list {
+    flex-direction: row;
+    max-width: calc(100vw - 32px);
+    overflow: auto;
+  }
+  .subcontent .subcontent-section .university-list .university {
+    min-width: 100%;
     display: flex;
     flex-direction: column;
-    max-width: 370px;
   }
   .subcontent .subcontent-section {
     display: flex;
     flex-direction: column;
-    max-width: 370px;
   }
   .subcontent .subcontent-section .filter {
     display: none;
@@ -1078,11 +1090,41 @@ body {
   .link-dark-grey-btn {
     display: none;
   }
-  .main {
+  .subcontent .subcontent-section .contacts-box .main {
+    display: none;
+  }
+  .subcontent .subcontent-section .contacts-box .main.mobile {
     display: flex;
-    flex-direction: column;
   }
   .white-btn {
     width: 100%;
+  }
+  .subcontent .subcontent-section .university-list .university .side-info {
+    width: auto;
+  }
+  .subcontent .subcontent-section .university-list .university .side-info .row:first-child {
+    display: none;
+  }
+  .discr-university p {
+    max-height: 150px;
+    overflow: hidden;
+  }
+  .subcontent .subcontent-section .about .collage-img {
+    grid-template-columns: repeat(2, 1fr) repeat(2, 106px);
+    grid-template-rows: repeat(2, 106px) repeat(2, 0);
+  }
+  .body-box .secondary-btn {
+    display: flex;
+    margin: auto;
+    white-space: normal;
+  }
+  .show-all-section {
+    text-align: center;
+  }
+  .show-all-section .secondary-btn {
+    white-space: normal;
+  }
+  .subcontent .subcontent-section .left-right-sub .sub-info-box .sub-infonum {
+    flex-wrap: wrap;
   }
 }/*# sourceMappingURL=style.css.map */
