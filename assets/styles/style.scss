@@ -77,6 +77,18 @@ body{
             .search-input{
                 margin-left: $size-16px;
                 margin-right: $size-16px;
+                position: relative;
+            
+                button{
+                    position: absolute;
+                    top: 9px;
+                    right: 2px;
+                    display: none;
+
+                    &.show{
+                        display: inline;
+                    }
+                }
 
                 input{
                     width: 100%;
@@ -1128,6 +1140,48 @@ body{
     flex-wrap: wrap;
 }
 }
+
+.loader {
+        width: 48px;
+        height: 48px;
+        border: solid 2px #0656B4;        
+        border-radius: 50px;
+        animation: 2s loading infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+
+        &:after{
+            content: '';
+            display: block;
+            width: 36px;
+            height: 36px;
+            border: solid 2px #0656B4;        
+            border-radius: 50px;
+            animation: 2s loading infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+}
+
+.error{
+    color: red;
+    font-size: small;
+}
+
+@keyframes loading {
+    from {
+      opacity: 1;
+      transform: scale(0.5);
+    }
+   
+    to {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
 
 
 

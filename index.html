@@ -30,13 +30,16 @@
                     <div class="location-search">
                         <div class="search-input">
                             <input id="locationSearchInput" placeholder="Регион, город, населенный пункт" type="text">
+                            <button id="clearBtn" class="image-btn noborder-btn">
+                                <img src="./assets/images/icons/close.svg" alt="">
+                            </button>
                         </div>
+
                         <div class="chosen-location">
 
                         </div>
-                        <section class="location-list">
-
-                        </section>
+                        <section class="location-list"></section>
+                        <section id="error-load"></section>
 
                         <button id="saveLocationsBtn" class="save-location-btn">Сохранить</button>
 
@@ -71,7 +74,6 @@
             <img src="./assets/images/back.svg" alt="">
             Назад
         </div>
-
 
         <div class="nav-container">
             <button id='navScrollLeftBtn' class="nav-arrow-btn left hide"></button>

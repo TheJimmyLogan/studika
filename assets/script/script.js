@@ -121,29 +121,54 @@ function showLocations(list) {
     })
 }
 
-function openLocation(e) {
+function loadLocations() {
     if (areas.length === 0) {
-        fetch("../../responses/areas.json")
+        document.getElementById('error-load').innerText = '';
+        const loaderDiv = document.createElement('div')
+        loaderDiv.className = 'loader'
+        document.getElementById('error-load').append(loaderDiv)
+
+        fetch("https://studika.ru/api/areas", {
+            method: "POST"
+        })
             .then(res => res.json())
             .then(data => {
                 areas = data || [];
+                document.getElementById('error-load').innerText = '';
                 showLocations(areas)
             })
+            .catch(error => {
+                document.getElementById('error-load').innerText = ''
+                const errorSpan = document.createElement('span')
+                errorSpan.className = 'error'
+
+                const retryBtn = document.createElement('button')
+                retryBtn.className = 'link-btn'
+                retryBtn.innerText = 'Перезагрузить'
+                retryBtn.addEventListener('click', loadLocations)
+
+                errorSpan.append('Произошла ошибка. ', retryBtn)
+                document.getElementById('error-load').append(errorSpan)
+            })
     }
-
-
-    e.stopPropagation();
-    document.querySelector('.location-search').classList.toggle('show');
-
 }
 
-function filterLocations(e) {
-    const search = e.target.value.toLowerCase();
+function openLocation(e) {
+    e.stopPropagation();
+    document.querySelector('.location-search').classList.toggle('show');
+    loadLocations()
+}
+
+function filterLocations() {
+    const search = document.getElementById('locationSearchInput').value.toLowerCase();
 
     if (search.length === 0) {
+        document.getElementById('clearBtn').classList.remove('show')
         showLocations(areas)
         return
     }
+
+    document.getElementById('clearBtn').classList.add('show')
     const filteredAreas = [];
 
     areas.forEach(result => {
@@ -178,6 +203,11 @@ function filterLocations(e) {
 function saveLocations() {
     document.querySelector('.selected-location').innerText = selectedLocations.join(', ') || 'Любой регион';
     document.querySelector('.location-search').classList.remove('show');
+    document.cookie = selectedLocations.join(',')
+    fetch('/saveLocations', {
+        method: 'POST',
+        body: JSON.stringify(selectedLocations)
+    })
 }
 
 document.getElementById('locationOpenBtn').addEventListener('click', openLocation)
@@ -235,3 +265,20 @@ function navScrollRight(e) {
 document.getElementById('navScrollLeftBtn').addEventListener('click', navScrollLeft)
 document.getElementById('navScrollRightBtn').addEventListener('click', navScrollRight)
 
+function clearLocation() {
+    document.getElementById('locationSearchInput').value = ''
+    filterLocations()
+}
+
+document.getElementById('clearBtn').addEventListener('click', clearLocation)
+
+
+function loadCities() {
+    const savedCities = document.cookie;
+    if (!savedCities) return;
+    selectedLocations = savedCities.split(',')
+    saveLocations()
+    drawSelectedLocation(selectedLocations)
+}
+
+loadCities()
